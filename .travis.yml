@@ -2,4 +2,14 @@ sudo: required
 services:
   - docker
 script:
-  - docker build -t react-app .
+  - docker build -t studentofdocker/react-example .
+  - docker images studentofdocker/react-example
+
+before_deploy:
+  - docker login -u studentofdocker -p Docker1q2w3e4r
+
+deploy:
+  provider: script
+  script: docker push studentofdocker/react-example
+  on:
+    branch: master
