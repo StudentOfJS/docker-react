@@ -8,7 +8,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Surprised if this works</p>
+          <p>
+            Surprised if this works,especially with Travis and Docker, but it
+            seems to be cool
+          </p>
           <a
             className="App-link"
             href="https://reactjs.org"
